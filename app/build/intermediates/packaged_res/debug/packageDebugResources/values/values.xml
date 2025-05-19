@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Compass App</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDXAQzUtcNMJ076InW1635K-cd90H-whbk</string>
+    <style name="Base.Theme.CompassApp" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.CompassApp" parent="Base.Theme.CompassApp"/>
+    <style name="Title">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

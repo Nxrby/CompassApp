@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Compass App</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDXAQzUtcNMJ076InW1635K-cd90H-whbk</string>
+</resources>

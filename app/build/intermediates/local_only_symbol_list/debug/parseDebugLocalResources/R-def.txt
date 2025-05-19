@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable arrow
+drawable baseline_landscape_24
+drawable baseline_location_on_24
+drawable compass_rose
+drawable dial
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id compassImageView
+id confirmButton
+id destinationArrow
+id directionTV
+id distanceTV
+id headingTV
+id latitudeTV
+id longitudeTV
+id main
+id map
+id selectDestinationButton
+layout activity_main
+layout activity_map
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string google_maps_key
+style Base.Theme.CompassApp
+style Theme.CompassApp
+style Title
+xml backup_rules
+xml data_extraction_rules
