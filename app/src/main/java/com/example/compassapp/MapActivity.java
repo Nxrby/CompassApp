@@ -31,7 +31,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         double currentLon = intent.getDoubleExtra("current_longitude", 0);
         currentLocation = new LatLng(currentLat, currentLon);
 
-        // Initialize map
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
@@ -53,7 +52,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Enable my location layer if permission is granted
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
         }
@@ -63,7 +61,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15f));
         } else {
-            // Fallback to a default location (e.g., Budapest) if no location is available
             LatLng defaultLocation = new LatLng(47.4979, 19.0402);
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 10f));
             Toast.makeText(this, "Current location unavailable", Toast.LENGTH_SHORT).show();
