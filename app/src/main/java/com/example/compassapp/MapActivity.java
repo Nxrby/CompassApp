@@ -25,7 +25,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        // Get current location from intent
         Intent intent = getIntent();
         double currentLat = intent.getDoubleExtra("current_latitude", 0);
         double currentLon = intent.getDoubleExtra("current_longitude", 0);
@@ -56,7 +55,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        // Center map on current location if valid
         if (currentLocation.latitude != 0 && currentLocation.longitude != 0) {
             mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15f));
@@ -66,7 +64,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Current location unavailable", Toast.LENGTH_SHORT).show();
         }
 
-        // Handle map clicks to select destination
         mMap.setOnMapClickListener(latLng -> {
             mMap.clear();
             if (currentLocation.latitude != 0 && currentLocation.longitude != 0) {
